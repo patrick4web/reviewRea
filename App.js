@@ -16,7 +16,7 @@ import Main from './comp/Main';
 
 function App(){
   return(
-    <View>
+    <View style={{flex:1}}>
       <Main />
     </View>
   )
