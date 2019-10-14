@@ -8,6 +8,7 @@ import Mid from './Mid';
 function Main(){
     return(
         <View style={{flex:1}}>
+        <View style={{display:'flex',flex:1}}>
             <Mid/>
  
         </View>

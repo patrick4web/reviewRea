@@ -8,7 +8,16 @@ import styles from '../styles/MidStyles';
 
 function Mid(){
 
-    const [setPick, setShowPick] = useState(1);
+    const [setPick, setShowPick] = useState(1)
+
+    var bgColor = null;
+    if(setPick == 1){
+        bgColor = styles.bg1
+    }
+
+    if(setPick == 2){
+        bgColor = styles.bg2
+    }
 
     var bgColor = null;
     if(setPick == 1){
@@ -20,9 +29,11 @@ function Mid(){
 
     return (
         <View style={bgColor}>
-            <Picker style={{width:150}}
+            <Picker
+            style={styles.cont}
             onValueChange={(value)=>{setShowPick(value)}}
             selectedValue={setPick}>
+
                 <Picker.Item label="Color 1" value="1"/>
                 <Picker.Item label="Color 2" value="2"/>
             </Picker>
