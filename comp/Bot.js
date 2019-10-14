@@ -4,12 +4,22 @@ import styles from '../styles/Bot-styles';
 
 function Bot(){
     
-    
+    const [setAlert, setShowAlert] = useState('')
     
     return(
-        <View>
+        <View style={styles.cont}>
 
-            <TextInput />
+            <TextInput 
+            placeholder="Enter Text Here"
+            onChangeText={(text) => {setShowAlert(text)}}
+            value={setAlert}
+            />
+
+            <Button
+            title="Send"
+            onPress={()=>(setAlert)}
+            />
+
         </View>
     );
 }
