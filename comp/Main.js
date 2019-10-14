@@ -1,14 +1,16 @@
 import React from 'react';
 import {View} from 'react-native';
+import Mid from './Mid';
 
 
 
 
 function Main(){
     return(
-        <View>
-
-           
+        <View style={{flex:1}}>
+        <View style={{display:'flex',flex:1}}>
+            <Mid/>
+ 
         </View>
     )
 }
