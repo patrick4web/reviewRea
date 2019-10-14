@@ -10,10 +10,17 @@ function Mid(){
 
     const [setPick, setShowPick] = useState(1);
 
+    var bgColor = null;
+    if(setPick == 1){
+        bgColor = styles.container1
+    }
+    if(setPick == 2){
+        bgColor = styles.container2
+    }
+
     return (
-        <View style={styles.midS}>
-            <Picker
-            styles={{width:50}}
+        <View style={bgColor}>
+            <Picker style={{width:150}}
             onValueChange={(value)=>{setShowPick(value)}}
             selectedValue={setPick}>
                 <Picker.Item label="Color 1" value="1"/>
