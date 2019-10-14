@@ -8,16 +8,15 @@ const [bgState, SetBgState] = useState(false)
 
 var bgColor = null;
 var title = null;
-if(bgState == false){
+
+if(bgState === false){
     title = (
-
-        <Text>Day Mode</Text>
-
-    )
+         <Text>Day Mode</Text>
+     )
     bgColor = styles.container1
    }
 
-if(bgState == true){
+if(bgState === true){
 
     title =(
 
@@ -26,17 +25,17 @@ if(bgState == true){
     )
     bgColor = styles.container2
  
-}
-   return(
+} 
+   return (
 
-        <View  style={bgColor}>
+        <View style={bgColor}>
             
-            <Switch style={styles.switch}
-            onValueChange={(value)=>{SetBgState(value)}}
+            <Switch 
+            style={styles.switch}
+            onValueChange={(value)=>SetBgState(value)}
             value = {bgState}
             />
-
-            {title}
+        {title}
 
          </View>
       )
